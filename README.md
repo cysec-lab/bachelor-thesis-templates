@@ -7,7 +7,7 @@
 ## レビュー用 Pull Request 作成方法
 
 1. 準備
-    - Git CLIをインストール
+    - [GitHub CLIをインストール](https://cli.github.com/)
     - デフォルトブランチが `main` 出ない場合は変更
 2. 以下をコピーしてターミナルにペースト
     ```sh

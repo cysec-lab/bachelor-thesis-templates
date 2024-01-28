@@ -6,13 +6,13 @@
 
 ## レビュー用 Pull Request 作成方法
 
-前提
+1. 準備
+  - Git CLIをインストール
+  - デフォルトブランチが `main` 出ない場合は変更
+2. 以下をコピーしてターミナルにペースト
+    ```sh
+    git branch review $(git rev-list --max-parents=0 HEAD | tail -n 1) \
+    && git push origin review \
+    && gh pr create --base review --head main --title "レビュー用" --body "レビュー用PRです。マージはしないでください。"
+    ```
 
-- Git CLIをインストールしておくこと
-- デフォルトブランチが `main` であること
-
-```sh
-git branch review $(git rev-list --max-parents=0 HEAD | tail -n 1) \
-&& git push origin review \
-&& gh pr create --base review --head main --title "レビュー用" --body "レビュー用PRです。マージはしないでください。"
-```

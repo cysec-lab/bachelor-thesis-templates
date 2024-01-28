@@ -8,7 +8,7 @@
 
 1. 準備
     - [GitHub CLIをインストール](https://cli.github.com/)
-    - デフォルトブランチが `main` 出ない場合は変更
+    - デフォルトブランチが `main` でない場合は変更
 2. 以下をコピーしてターミナルにペースト
     ```sh
     git branch review $(git rev-list --max-parents=0 HEAD | tail -n 1) \

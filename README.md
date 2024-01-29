@@ -13,7 +13,7 @@ Cysec 研で推奨している LaTeX 環境は特にないので，お好みの�
 
 任意で，tex ファイルを整形するための perl package をインストールする．
 
-```
+```bash
 brew install perl
 sudo cpan install Log::Log4perl File::HomeDir
 ```
@@ -28,3 +28,37 @@ VS Code の User Snippets は，頻繁に使用するコードブロックを短
 
 推奨される VSCode 拡張機能を [.vscode/extensions.json](./.vscode/extensions.json)に記載しています．
 拡張機能メニューを開いて`@recommended` と入力し，インストールボタンをクリックすることでインストールできます．
+
+## Linterの使い方
+
+### ローカル環境でLintを行う
+
+必要なもの
+
+* Node.js
+  * 20以上を推奨
+* npmまたはyarnまたはpnpm
+  * おすすめはyarnとpnpmです
+
+```bash
+cd scripts
+# 以下のコマンドのうち、好きなものを実行
+# npmを使う場合
+npm i
+npm run lint
+
+# yarnを使う場合
+yarn
+yarn lint
+
+# pnpmを使う場合
+pnpm i
+pnpm lint
+```
+
+### リモート環境でLintを行う
+
+[actions/workflowsページ](./actions/workflows/lint.yaml)を開いて、右上の`Run workflow`ボタンを押すと、リモート環境でLintが実行されます。
+
+なお、この機能は`main`ブランチにLaTeXファイルがpushされたときにも自動で実行されます。
+

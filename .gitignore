@@ -1,5 +1,6 @@
 .DS_Store
- 
+node_modules
+
 # out ディレクトリ以下の pdf ファイル以外
 out/*
 !out/*.pdf

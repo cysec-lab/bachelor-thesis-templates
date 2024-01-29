@@ -42,7 +42,7 @@ VS Code の User Snippets は，頻繁に使用するコードブロックを短
 
 ```bash
 cd scripts
-# 以下のコマンドのうち、好きなものを実行
+# 以下のコマンドのうち，好きなものを実行
 # npmを使う場合
 npm i
 npm run lint
@@ -58,7 +58,14 @@ pnpm lint
 
 ### リモート環境でLintを行う
 
-[actions/workflowsページ](./actions/workflows/lint.yaml)を開いて、右上の`Run workflow`ボタンを押すと、リモート環境でLintが実行されます。
+[actions/workflowsページ](./actions/workflows/lint.yaml)を開いて，右上の`Run workflow`ボタンを押すと，リモート環境でLintが実行されます．
 
-なお、この機能は`main`ブランチにLaTeXファイルがpushされたときにも自動で実行されます。
+なお，この機能は`main`ブランチにLaTeXファイルがpushされたときにも自動で実行されます．
 
+## 自動でPDFをGitHubにアップロードする
+
+以下のコマンドを一度だけ実行してください．
+
+```bash
+git config --local core.hooksPath .githooks
+```

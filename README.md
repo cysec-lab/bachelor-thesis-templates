@@ -11,6 +11,16 @@ Cysec 研で推奨している LaTeX 環境は特にないので，お好みの�
 [VSCode で最高の LaTeX 環境を作る #VSCode - Qiita](https://qiita.com/rainbartown/items/d7718f12d71e688f3573#%E5%BF%85%E8%A6%81%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
 の手順通りに，VSCode，TeX live のインストール，latexmkrc の編集を行う．
 
+1. 準備
+   - [GitHub CLI をインストール](https://cli.github.com/)
+   - デフォルトブランチが `main` でない場合は変更
+2. 以下をコピーしてターミナルにペースト
+   ```sh
+   git branch review $(git rev-list --max-parents=0 HEAD | tail -n 1) \
+   && git push origin review \
+   && gh pr create --base review --head main --title "レビュー用" --body "レビュー用PRです。マージはしないでください。"
+   ```
+
 任意で，tex ファイルを整形するための perl package をインストールする．
 
 ```bash

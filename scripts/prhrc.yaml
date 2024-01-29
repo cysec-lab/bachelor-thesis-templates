@@ -1,0 +1,9 @@
+# prh Document
+# 詳しい書き方は以下のドキュメントを参照してください
+# https://github.com/prh/prh/blob/master/misc/prh.yml
+
+rules:
+ - expected: コンピュータ
+   patterns:
+     - コンピューター
+     - パソコン

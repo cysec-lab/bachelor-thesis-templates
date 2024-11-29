@@ -1,11 +1,12 @@
-version: "3.8"
+version: "3"
 services:
-  cytex-texlive:
-    image: ran350/cytex-texlive:0.0.1
-    # build: . # if you want to build the image locally
+  ubuntu-texlive-ja:
+    image: korosuke613/ubuntu-texlive-ja-devcontainer
+    #build: .
+    command: sleep infinity
     volumes:
-      - ../:/workspaces/CyTeX
+      - ../:/workdir
+      - ~/.gitconfig:/root/.gitconfig
       - ./.latexmkrc:/root/.latexmkrc
-    tty: true
     environment:
       SHELL: "/bin/bash"

@@ -2,7 +2,6 @@ version: "3"
 services:
   ubuntu-texlive-ja:
     image: korosuke613/ubuntu-texlive-ja-devcontainer
-    #build: .
     command: sleep infinity
     volumes:
       - ../:/workdir

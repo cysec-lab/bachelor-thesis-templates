@@ -98,6 +98,7 @@
         "*.snm",
         "*.vrb",
     ],
+    "textlint.configPath": "scripts/package.json",
     // latex-workshop.view.pdf.viewer: PDF ビューアの開き方
     // VSCode 自体には PDF ファイルを閲覧する機能が備わっていないが、
     // LaTeX Workshop にはその機能が備わっている。

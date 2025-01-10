@@ -5,7 +5,6 @@ services:
     command: sleep infinity
     volumes:
       - ../:/workdir
-      - ~/.gitconfig:/root/.gitconfig
       - ./.latexmkrc:/root/.latexmkrc
     environment:
       SHELL: "/bin/bash"

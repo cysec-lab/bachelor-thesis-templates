@@ -8,12 +8,15 @@
     "lint-fix": "textlint ../**/*.tex --fix"
   },
   "devDependencies": {
+    "@textlint-rule/textlint-rule-preset-google": "^0.1.2",
     "textlint": "^12.4.0",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-plugin-latex2e": "^1.2.0",
     "textlint-rule-preset-ja-engineering-paper": "^1.0.4",
-    "textlint-rule-preset-ja-spacing": "^2.2.0",
-    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
-    "textlint-rule-preset-japanese": "^7.0.0"
+    "textlint-rule-preset-ja-spacing": "^2.4.3",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
+    "textlint-rule-preset-japanese": "^10.0.4",
+    "textlint-rule-prh": "^6.0.0",
+    "textlint-rule-terminology": "^5.0.12"
   }
 }
